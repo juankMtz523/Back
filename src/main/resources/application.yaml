@@ -1,0 +1,78 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ordenes-service
+
+  datasource:
+    url: jdbc:postgresql://66.179.136.12:5432/gtim_service_db    
+    username: dba_master
+    password: BwEO+B1qTVo0PKVyTWhlb9g5A1Gc1VfQN2VmacV5Z6g=~
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+    open-in-view: false
+
+  jackson:
+    use-jackson2-defaults: true
+    serialization:
+      indent-output: true
+      fail-on-empty-beans: false
+    datatype:
+      datetime:
+        write-dates-as-timestamps: false
+
+  servlet:
+     multipart:
+       max-file-size: 25MB
+       max-request-size: 25MB
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: j.c.m.c.523@gmail.com
+    password: ihxkdtkwntpwflbo
+    protocol: smtp
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.ssl.trust: smtp.gmail.com
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+
+logging:
+  level:
+    com.gtim.service_orders: ERROR
+    org.springdoc: ERROR
+    org.springframework.web: ERROR
+
+security:
+  jwt:
+    secret: V2VsY29tZV90b19URl9KU1RfQXBwbGljYXRpb25fQ2xpZW50X1NlY3JldF9LRVkxMjM0NTY3ODk=
+    access-expiration-minutes: 720
+    refresh-expiration-minutes: 1380
+
+storage:
+  commercial-proposals-path: /storage/commercial-proposals/
+
+scheduler:
+  proposals:
+    reminder-cron: "0 0 8 * * ?"
+#		reminder-cron: "0 * * * * ?"
+
+

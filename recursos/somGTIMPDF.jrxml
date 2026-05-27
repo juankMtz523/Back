@@ -1,0 +1,735 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<!-- 2026-04-10T20:00:50 -->
+<jasperReport name="somGTIMPDF" language="java" pageWidth="792" pageHeight="612" whenNoDataType="BlankPage" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="944aade9-cba3-4db0-b571-8a610f698de7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="false"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="DataSetEtapas" uuid="d51d9f06-29e5-4368-bcb9-8dc9d697886b">
+		<query language="sql"><![CDATA[]]></query>
+		<field name="nombreEtapa" class="java.lang.String"/>
+		<field name="estatusEtapa" class="java.lang.String"/>
+		<field name="fechaInicio" class="java.lang.String"/>
+		<field name="fechaFin" class="java.lang.String"/>
+	</dataset>
+	<dataset name="DataSetRoles" uuid="f2ba65af-91cd-4d80-8121-63d239f248e4">
+		<query language="sql"><![CDATA[]]></query>
+		<field name="rol" class="java.lang.String"/>
+		<field name="cantidad" class="java.lang.Integer"/>
+		<field name="tarifa" class="java.lang.String"/>
+		<field name="asignacion" class="java.lang.String"/>
+		<field name="tiempo" class="java.lang.String"/>
+		<field name="costoTotal" class="java.lang.String"/>
+	</dataset>
+	<parameter name="pImageBackground" forPrompting="false" class="java.lang.Object"/>
+	<parameter name="pImageLogo" forPrompting="false" class="java.lang.Object"/>
+	<parameter name="pTituloProyecto" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pNombreProyecto" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pDetalleNombreProyecto" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pCliente" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pFolioProyecto" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pFechaInicio" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pFolioPropuestaComercial" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pEstatusPropuestaComercial" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pDescripcionPropuestaComercial" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pAlcancePropuestaComercial" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pPlanAltaNivel" forPrompting="false" class="java.lang.Object"/>
+	<parameter name="pPlanAltoNivelTxt" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pTotalGeneral" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pSupuestos" forPrompting="false" class="java.lang.String"/>
+	<parameter name="pCondicionesGenerales" forPrompting="false" class="java.lang.String"/>
+	<parameter name="CollectionBeanParamEtapas" forPrompting="false" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="CollectionBeanParamRoles" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="pFechaActual" class="java.lang.String"/>
+	<parameter name="pHeaderIcon" class="java.lang.Object"/>
+	<query language="sql"><![CDATA[]]></query>
+	<detail>
+		<band height="572">
+			<element kind="image" uuid="2d7b9b21-9682-40f2-8f24-f4e4851f4370" stretchType="ContainerHeight" x="0" y="0" width="750" height="572" scaleImage="FillFrame" onErrorType="Blank" lazy="true" hImageAlign="Center" vImageAlign="Middle">
+				<expression><![CDATA["/app/fondopdf.jpg"]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="imgBackground"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="image" uuid="34b3fa18-f61f-4dcd-ab96-6963aa33b93b" key="" x="10" y="310" width="123" height="61" scaleImage="FillFrame" onErrorType="Blank" hImageAlign="Center" vImageAlign="Middle">
+				<expression><![CDATA["/app/logo_gtim.png"]]></expression>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="imgLogo"/>
+			</element>
+			<element kind="staticText" uuid="437913bc-ef9d-4cd4-843e-4e51af9d54ed" x="10" y="120" width="400" height="60" forecolor="#FFFFFF" markup="styled" fontName="Outfit" fontSize="40.0" bold="true" hTextAlign="Left">
+				<text><![CDATA[Propuesta Comercial]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblPropuestaComercial"/>
+			</element>
+			<element kind="textField" uuid="55935f87-efb5-4780-a09e-74c160e99536" x="10" y="180" width="480" height="30" forecolor="#FFFFFF" fontName="Inter 18pt SemiBold" fontSize="19.0" textAdjust="ScaleFont" blankWhenNull="true" bold="true" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$P{pTituloProyecto}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtFolioProyectoPortada"/>
+			</element>
+			<element kind="textField" uuid="beabcfe4-d659-4c33-90d3-ef165593ba66" key="" x="10" y="220" width="470" height="30" forecolor="#FFFFFF" fontName="Inter 18pt ExtraLight" fontSize="19.0" textAdjust="ScaleFont" blankWhenNull="true" bold="true" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$P{pNombreProyecto}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtNombreProyectoPortada"/>
+			</element>
+			<element kind="rectangle" uuid="739a368c-193e-45bc-a573-19f2a4e3370e" x="96" y="520" width="561" height="1" forecolor="#9AB5E2" backcolor="#9AB5E2">
+				<property name="com.jaspersoft.studio.element.name" value="line1"/>
+			</element>
+			<element kind="staticText" uuid="a3d05b11-c361-4d16-a98d-67656c657943" key="" x="96" y="521" width="163" height="20" forecolor="#9AB5E2" fontName="Inter 18pt" fontSize="12.0">
+				<text><![CDATA[https://grupotimexico.com/]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblPaginaUrl"/>
+			</element>
+			<element kind="textField" uuid="94cc7d65-0cab-447c-8daf-1d522b71e1a3" x="520" y="521" width="136" height="20" forecolor="#9AB5E2" fontName="Inter 18pt" fontSize="12.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{pFechaActual}]]></expression>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="txtFechaActual"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+		</band>
+		<band height="572">
+			<element kind="rectangle" uuid="5d8fee38-dded-494b-9d90-3023d03f1d30" x="10" y="381" width="732" height="182" backcolor="rgba(255, 255, 255, 0.0)" radius="18">
+				<property name="com.jaspersoft.studio.element.name" value="rectangulo3"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="rectangle" uuid="de7e7abc-9b58-47ef-8765-0197b839b0ea" x="10" y="220" width="731" height="110" backcolor="rgba(255, 255, 255, 0.0)" radius="18">
+				<property name="com.jaspersoft.studio.element.name" value="rectangulo2"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="rectangle" uuid="cb1f0c09-bf35-4edd-89bf-97eea11fa1c5" x="10" y="50" width="732" height="160" backcolor="rgba(255, 255, 255, 0.0)" radius="18">
+				<property name="com.jaspersoft.studio.element.name" value="rectangulo1"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="staticText" uuid="10123d1a-c0c0-49c8-8dca-75c8c636c4bd" x="10" y="10" width="122" height="30" fontName="Outfit" fontSize="22.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Detalles del]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblTituloDetalleProyecto"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="f17abbdf-f4ab-4870-a0a4-c18dcf5cf060" x="23" y="60" width="180" height="20" fontName="Inter 18pt ExtraBold" fontSize="12.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Nombre del proyecto:]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblbNombreProyectoDetalle"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="staticText" uuid="39f3f323-2680-4fd6-9904-9dff8f35c56c" x="23" y="100" width="180" height="20" fontName="Inter 18pt ExtraBold" fontSize="12.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Cliente:]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblClienteDetalle"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="staticText" uuid="2f840334-83fb-4a47-9810-683e8a8ff152" x="23" y="140" width="180" height="20" fontName="Inter 18pt ExtraBold" fontSize="12.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Folio del Cliente:]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblFolioClienteDetalle"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="staticText" uuid="db981b23-5cc9-4e53-80f7-1365d9c81933" x="23" y="180" width="180" height="20" fontName="Inter 18pt ExtraBold" fontSize="12.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Fecha de Inicio del proyecto:]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblFechaInicioDetalle"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="85de5102-f869-4cb2-95a8-00921f4d56c6" positionType="Float" x="203" y="60" width="511" height="20" fontName="Inter 18pt" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" vTextAlign="Middle">
+				<expression><![CDATA[$P{pDetalleNombreProyecto}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtNombreProyectoDetalle"/>
+			</element>
+			<element kind="textField" uuid="4eb4ce32-52be-4bd9-a9ce-833d33d5edc8" positionType="Float" x="203" y="100" width="511" height="20" fontName="Inter 18pt" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" vTextAlign="Middle">
+				<expression><![CDATA[$P{pCliente}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtClienteDetalle"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="bd612172-68b7-40c6-a212-6e8bb2dd769e" positionType="Float" x="203" y="140" width="511" height="20" fontName="Inter 18pt" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" vTextAlign="Middle">
+				<expression><![CDATA[$P{pFolioProyecto}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtFolioClienteDetalle"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="0233d819-7e84-4585-b50b-c155d3d1951b" positionType="Float" x="203" y="180" width="511" height="20" fontName="Inter 18pt" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" vTextAlign="Middle">
+				<expression><![CDATA[$P{pFechaInicio}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtFechaInicioDetalle"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="component" uuid="b38fbe3d-d060-4e17-995a-9ec6d46ac591" stretchType="ElementGroupHeight" x="30" y="230" width="694" height="44" printInFirstWholeBand="true" removeLineWhenBlank="true">
+				<component kind="table" whenNoDataType="Blank">
+					<datasetRun uuid="2f48e42a-bc54-4474-a350-e54513b1965f" subDataset="DataSetEtapas">
+						<dataSourceExpression><![CDATA[$P{CollectionBeanParamEtapas}]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="single" uuid="56507b0d-c5f8-4666-9616-328b075e6d2c" width="179">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="2069b123-1190-40ae-88fe-d77729bffbd8" mode="Transparent" x="0" y="0" width="169" height="18" backcolor="rgba(255, 255, 255, 0.0)" fontName="Inter 18pt SemiBold" fontSize="12.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+								<text><![CDATA[Etapa:]]></text>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="5"/>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="ec4deb72-497d-46c1-b608-450271d5b8f3" x="0" y="0" width="179" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" vTextAlign="Middle">
+								<expression><![CDATA[$F{nombreEtapa}]]></expression>
+								<box leftPadding="5" rightPadding="5"/>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="f6885b8a-dda9-4d99-b655-36a6fe8d01e4" width="151">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="d2d40a9a-829c-47d0-94ed-6d7e09ea84de" x="0" y="0" width="151" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+								<text><![CDATA[Estatus:]]></text>
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0" lineColor="#C2D2ED"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+								</box>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<pen lineWidth="1.0" lineColor="#9AB5E2"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+							</box>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="a586fefe-3f99-4588-89c1-7c81d394042a" x="0" y="0" width="151" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" vTextAlign="Middle">
+								<expression><![CDATA[$F{estatusEtapa}]]></expression>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0" lineColor="#C2D2ED"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+								</box>
+							</element>
+							<box>
+								<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+							</box>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="6b103e9e-8f15-43b8-98bb-a0c24a15d973" width="179">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="e1a7fe94-89e6-4e2e-9b49-fd70084bc66a" x="0" y="0" width="179" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+								<text><![CDATA[Fecha Inicio:]]></text>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0" lineColor="#C2D2ED"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+								</box>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<pen lineWidth="1.0"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+							</box>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="e1c8912e-fb0f-442a-bcfb-4919511c7a20" x="0" y="0" width="179" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" vTextAlign="Middle">
+								<expression><![CDATA[$F{fechaInicio}]]></expression>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0" lineColor="#C2D2ED"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+								</box>
+							</element>
+							<box>
+								<pen lineColor="#9AB5E2"/>
+								<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#9AB5E2"/>
+							</box>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+					<column kind="single" uuid="0d96bed0-e831-4fda-a84a-f80e8605ec1b" width="185">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="794c0e67-e7c8-4afc-9332-b32141ad0fed" positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="185" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+								<text><![CDATA[Fecha Fin:]]></text>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								<box leftPadding="5" rightPadding="5"/>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="c32a146a-db93-4e52-9e1f-793afb9ebe8c" x="0" y="0" width="185" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" vTextAlign="Middle">
+								<expression><![CDATA[$F{fechaFin}]]></expression>
+								<box leftPadding="5" rightPadding="5"/>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				<property name="com.jaspersoft.studio.element.name" value="tblEtapas"/>
+				<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+				<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="5efdc8c0-8e61-47ab-90c1-bc047c191c04" x="10" y="340" width="140" height="30" fontName="Outfit" fontSize="22.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Detalles de la]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblDetallePropuestaComercial"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="a7bc04e7-5156-46d0-aadf-4bbddef1999a" x="23" y="389" width="180" height="20" fontName="Inter 18pt Medium" fontSize="12.0" bold="true" vTextAlign="Middle">
+				<text><![CDATA[Folio de propuesta comercial:]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblFolioPropuestaComercialDetalle"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="8a24b8f1-2c98-4727-a373-f4a3f738c195" x="23" y="429" width="180" height="20" fontName="Inter 18pt Medium" fontSize="12.0" bold="true" vTextAlign="Middle">
+				<text><![CDATA[Estatus]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblEstatusPropuestaDetalle"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="d0d1263d-000d-4654-a35c-e8981f48de2e" x="23" y="470" width="180" height="20" fontName="Inter 18pt Medium" fontSize="12.0" bold="true" vTextAlign="Middle">
+				<text><![CDATA[Descripción de servicio:]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblDescripcionPropuestaDetalle"/>
+			</element>
+			<element kind="staticText" uuid="fdbc27df-38f6-4b99-ae65-6d9f1de2979d" x="23" y="510" width="180" height="20" fontName="Inter 18pt Medium" fontSize="12.0" bold="true" vTextAlign="Middle">
+				<text><![CDATA[Alcance:]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblAlcancePropuestaDetalle"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="f83c47ea-af89-49b4-88b2-b9c30dd3eb41" x="203" y="389" width="511" height="19" fontName="Inter 18pt" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" vTextAlign="Middle">
+				<expression><![CDATA[$P{pFolioPropuestaComercial}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtFolioPropuestaDetalle"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="fb1e87a5-a469-4016-a72b-77a89094a43f" x="203" y="429" width="511" height="19" fontName="Inter 18pt" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" vTextAlign="Middle">
+				<expression><![CDATA[$P{pEstatusPropuestaComercial}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtEstatusPropuestaDetalle"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="bb30215f-cb8b-46e3-8106-146282069c27" x="203" y="470" width="511" height="19" fontName="Inter 18pt" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" vTextAlign="Middle">
+				<expression><![CDATA[$P{pDescripcionPropuestaComercial}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtDescripcionPropuestaDetalle"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="staticText" uuid="d7381c0a-922b-4f05-b8df-cc808e5c51f4" key="" x="133" y="10" width="100" height="30" forecolor="#D1363D" fontName="Outfit" fontSize="22.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[proyecto]]></text>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="lblTituloDetalleProyecto2"/>
+			</element>
+			<element kind="rectangle" uuid="a98647e9-faa8-434d-931f-309957cb900d" key="" x="30" y="90" width="670" height="1" forecolor="#9AB5E2" backcolor="#9AB5E2">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="line2"/>
+				<pen lineWidth="1.0"/>
+			</element>
+			<element kind="rectangle" uuid="015c5cad-d90e-40c7-86de-d4e930c19d5b" x="30" y="130" width="670" height="1" forecolor="#9AB5E2" backcolor="#9AB5E2">
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="line3"/>
+			</element>
+			<element kind="rectangle" uuid="3e4d89f3-7ec2-4516-a88d-de8573b62f65" key="" x="30" y="170" width="670" height="1" forecolor="#9AB5E2" backcolor="#9AB5E2">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="line4"/>
+			</element>
+			<element kind="staticText" uuid="d2dd8a78-408e-45ee-a62d-1e4abcc91b42" key="" x="150" y="340" width="240" height="30" forecolor="#D1363D" fontName="Outfit" fontSize="22.0" vTextAlign="Middle">
+				<text><![CDATA[propuesta comercial]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblDetallePropuestaComercial2"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="image" uuid="d63a4fc4-0e4b-41d5-9215-5370d9ccd2bb" x="710" y="10" width="30" height="30">
+				<expression><![CDATA["/app/iconopdf.png"]]></expression>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="imgIcon1"/>
+			</element>
+			<element kind="image" uuid="9635adc5-0056-472a-9f3a-67ccd7d47175" key="" x="710" y="340" width="30" height="30">
+				<expression><![CDATA["/app/iconopdf.png"]]></expression>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="imgIcon2"/>
+			</element>
+			<element kind="textField" uuid="1085527a-8b47-4697-a877-76c102391f6d" key="" x="203" y="510" width="511" height="50" fontName="Inter 18pt" fontSize="12.0" textAdjust="StretchHeight" evaluationTime="Auto" blankWhenNull="true" vTextAlign="Top">
+				<expression><![CDATA[$P{pAlcancePropuestaComercial}]]></expression>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="txtAlcance"/>
+			</element>
+			<element kind="rectangle" uuid="7820338d-15d7-493f-93f9-3666f084f68d" key="" x="30" y="420" width="670" height="1" forecolor="#C2D2ED" backcolor="#C2D2ED">
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="line5"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="rectangle" uuid="499c3f51-fd76-4df6-bdd6-14749626ecb4" key="" x="30" y="460" width="670" height="1" forecolor="#C2D2ED" backcolor="#C2D2ED">
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="line6"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="rectangle" uuid="802c1ed2-8fa4-4333-afba-a79e4a31cdb6" key="" x="30" y="500" width="670" height="1" forecolor="#C2D2ED" backcolor="#C2D2ED">
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="line7"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="572">
+			<element kind="rectangle" uuid="60e89752-f35c-4785-80d3-f7e0f469fcb0" key="" x="10" y="56" width="731" height="454" backcolor="rgba(255, 255, 255, 0.0)" radius="18">
+				<property name="com.jaspersoft.studio.element.name" value="rectangulo4"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="image" uuid="f00a39a0-aa2b-4fca-806d-b6110454c30a" x="21" y="70" width="709" height="350" scaleImage="RetainShape" onErrorType="Blank" hImageAlign="Center" vImageAlign="Middle">
+				<expression><![CDATA[$P{pPlanAltaNivel}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="imgPlanAltoNivel"/>
+			</element>
+			<element kind="staticText" uuid="77e1eb08-0e52-4433-a85b-59c5675779cb" x="10" y="10" width="50" height="30" fontName="Outfit" fontSize="22.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Plan]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblTituloPLanAltoNivel"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="5bd26fbf-35f9-430a-bd7d-0fc9fea099a3" x="20" y="430" width="710" height="50" fontName="Inter 18pt" fontSize="12.0" textAdjust="ScaleFont" blankWhenNull="true">
+				<expression><![CDATA[$P{pPlanAltoNivelTxt}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtPlanAltoNivel"/>
+			</element>
+			<element kind="staticText" uuid="37d4ef31-c6d3-4185-bcbc-3dd620fec1b9" key="" x="60" y="10" width="100" height="30" forecolor="#D1363D" fontName="Outfit" fontSize="22.0" vTextAlign="Middle">
+				<text><![CDATA[alto nivel]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblTituloPLanAltoNivel2"/>
+			</element>
+			<element kind="image" uuid="13dfe23c-2fd9-47a1-a540-3445f29bdbbb" key="" x="712" y="10" width="30" height="30">
+				<expression><![CDATA["/app/iconopdf.png"]]></expression>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="imgIcon3"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="572">
+			<element kind="rectangle" uuid="38b36a57-fc46-4b40-bac0-d5c69c6c93de" key="" x="10" y="50" width="731" height="391" backcolor="rgba(255, 255, 255, 0.0)" radius="18">
+				<property name="com.jaspersoft.studio.element.name" value="rectangulo5"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="staticText" uuid="cb747edd-4e89-4620-b93a-c911afd420b1" x="10" y="10" width="140" height="30" fontName="Outfit" fontSize="22.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Tabulador de]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblTituloTabularAsignacion"/>
+			</element>
+			<element kind="component" uuid="84d5b67b-e7fa-4c84-9d12-94d0f06e0c5c" x="20" y="60" width="711" height="36" printInFirstWholeBand="true" removeLineWhenBlank="true">
+				<component kind="table">
+					<datasetRun uuid="ba1aa7d2-0d96-4ca9-949b-86eabff5fcc4" subDataset="DataSetRoles">
+						<dataSourceExpression><![CDATA[$P{CollectionBeanParamRoles}]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="single" uuid="a762af9e-7869-4dd7-9f75-ac4d70500073" width="135">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="cb8b38cc-4e56-47b2-8597-32989b953cf0" x="0" y="0" width="125" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+								<text><![CDATA[Rol]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box leftPadding="5" rightPadding="5"/>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="6be77d5e-dfd4-4645-9f5e-cd931de15005" x="0" y="0" width="131" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" vTextAlign="Middle">
+								<expression><![CDATA[$F{rol}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="1.0" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="f8830f1c-9738-46f0-baf2-79e824acb33a" width="113">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="9c0ab61b-7ff6-4785-a1ee-b17bcd38306c" x="0" y="0" width="103" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[# Recursos]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box leftPadding="5" rightPadding="5"/>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="3f600d2a-eb08-4b34-b634-9fe43918f8cf" x="0" y="0" width="109" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" hTextAlign="Right" vTextAlign="Middle">
+								<expression><![CDATA[$F{cantidad}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5" lineColor="#9AB5E2"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="22b475e2-5d2e-4a1e-b313-beef3ac5918d" width="110">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="cfadd869-a57f-42c3-8067-2660b3587b85" x="0" y="0" width="100" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Tarifa/Hr]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="5" rightPadding="5"/>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="75fc69f2-7207-4fd6-bec7-3cfab7f0ab6b" x="0" y="0" width="106" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" hTextAlign="Right" vTextAlign="Middle">
+								<expression><![CDATA[$F{tarifa}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5" lineColor="#9AB5E2"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+					<column kind="single" uuid="fc361de9-9b1b-4265-b89c-e91d489265c7" width="115">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="def9c6d6-b1cb-4518-9312-9e221a4db75e" x="0" y="0" width="105" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[% Asignación]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="5" rightPadding="5"/>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="0875de40-65a1-41b3-8c98-c6198247fd53" x="0" y="0" width="111" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" hTextAlign="Right" vTextAlign="Middle">
+								<expression><![CDATA[$F{asignacion}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5" lineColor="#9AB5E2"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+					</column>
+					<column kind="single" uuid="cd56246d-bcbb-4d98-b842-aa99e3c641f6" width="119">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="7899d4f1-1960-4a09-91b9-60bb16322020" x="0" y="0" width="109" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Tiempo]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="5" rightPadding="5"/>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="89193fa3-e9d4-42af-942b-d3cf696dad6b" x="0" y="0" width="115" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" vTextAlign="Middle">
+								<expression><![CDATA[$F{tiempo}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5" lineColor="#9AB5E2"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+					</column>
+					<column kind="single" uuid="3e176c95-fa9f-471e-bc16-ca4b79ee4193" width="119">
+						<columnHeader height="18" rowSpan="1">
+							<element kind="staticText" uuid="78f51382-b4f3-4977-aa85-7e115fec25f4" x="0" y="0" width="109" height="18" fontName="Inter 18pt SemiBold" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Costo Total]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box leftPadding="5" rightPadding="5"/>
+						</columnHeader>
+						<detailCell height="18">
+							<element kind="textField" uuid="192a4c31-60e1-4e06-9afa-2829bd534b4e" x="0" y="0" width="115" height="18" fontName="Inter 18pt ExtraLight" fontSize="12.0" hTextAlign="Right" vTextAlign="Middle">
+								<expression><![CDATA[$F{costoTotal}]]></expression>
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5" lineColor="#9AB5E2"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#9AB5E2"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+				<property name="com.jaspersoft.studio.element.name" value="tblRoles"/>
+				<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+			</element>
+			<element kind="staticText" uuid="abbfc898-5227-4953-be2f-eeee66960a38" x="10" y="480" width="590" height="19" fontName="Inter 18pt" fontSize="14.0" bold="true" vTextAlign="Middle">
+				<text><![CDATA[Total General:]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lbltotalGeneralAsignacion"/>
+			</element>
+			<element kind="textField" uuid="7deb77da-c0e2-49f3-9abe-ec0e3f8afde8" x="600" y="480" width="131" height="18" fontName="Inter 18pt" fontSize="14.0" textAdjust="ScaleFont" blankWhenNull="true" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{pTotalGeneral}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtCostoGeneralRoles"/>
+			</element>
+			<element kind="staticText" uuid="dd5c78c9-1820-4432-bb30-3387da1cd248" x="10" y="510" width="720" height="10" fontSize="7.0" vTextAlign="Middle">
+				<text><![CDATA[* Los montos se encuentran expresados en Pesos Mexicanos y no incluye IVA.]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblPunto1"/>
+			</element>
+			<element kind="staticText" uuid="9bd5d9e6-9795-4eb7-a823-4d679bd90347" x="10" y="520" width="720" height="10" fontSize="7.0" vTextAlign="Middle">
+				<text><![CDATA[* La factura se presenta a 30 días de crédito.]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblPunto2"/>
+			</element>
+			<element kind="staticText" uuid="2fbc49f9-0f73-47ab-b30a-f9540e3073e0" x="10" y="530" width="720" height="10" fontSize="7.0" vTextAlign="Middle">
+				<text><![CDATA[* El esquema del servicio es 100% remoto.]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblPunto3"/>
+			</element>
+			<element kind="staticText" uuid="872bb629-e1cc-440e-8048-95e96c26932a" x="10" y="540" width="720" height="10" fontSize="7.0" vTextAlign="Middle">
+				<text><![CDATA[* Esta propuesta económica no incluye lincenciamiento de software ni hardware para entregar el servicio.]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblPunto4"/>
+			</element>
+			<element kind="staticText" uuid="0899b481-aad5-496e-b3cb-933190acba0f" key="" x="150" y="10" width="180" height="30" forecolor="#D1363D" fontName="Outfit" fontSize="22.0" vTextAlign="Middle">
+				<text><![CDATA[asignación]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblTituloTabularAsignacion2"/>
+			</element>
+			<element kind="image" uuid="dc761ffa-3176-4c53-84b1-4ccc4a0ffe30" key="" x="712" y="10" width="30" height="30">
+				<expression><![CDATA["/app/iconopdf.png"]]></expression>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="imgIcon4"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="572">
+			<element kind="rectangle" uuid="c673d663-33db-47bb-9594-ed4373964898" key="" x="10" y="50" width="732" height="510" backcolor="rgba(255, 255, 255, 0.0)" radius="18">
+				<property name="com.jaspersoft.studio.element.name" value="rectangulo6"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="staticText" uuid="d7589fa6-7757-42f0-9838-8590ccf8f9de" x="10" y="10" width="320" height="30" fontName="Outfit Light" fontSize="22.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Supuestos]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblSupuestos"/>
+			</element>
+			<element kind="textField" uuid="890cddeb-1e81-462b-903b-340152c95433" stretchType="ContainerHeight" x="21" y="60" width="709" height="490" markup="none" fontName="Inter 18pt Light" fontSize="12.0" textAdjust="ScaleFont" linkType="None" linkTarget="Self" blankWhenNull="true">
+				<expression><![CDATA[$P{pSupuestos}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtSupuestosPropuestaComercial"/>
+			</element>
+			<element kind="image" uuid="64619075-d1e8-4901-a04c-bab78d763acd" key="" x="712" y="10" width="30" height="30">
+				<expression><![CDATA["/app/iconopdf.png"]]></expression>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="imgIcon5"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="572">
+			<element kind="rectangle" uuid="93d82612-f4ee-4746-8d23-bade08a0463e" key="" x="10" y="50" width="730" height="510" backcolor="rgba(255, 255, 255, 0.0)" radius="18">
+				<property name="com.jaspersoft.studio.element.name" value="rectangulo7"/>
+				<pen lineColor="#C2D2ED"/>
+			</element>
+			<element kind="staticText" uuid="43af9626-777d-4342-9a41-72ac7f5730d1" x="10" y="10" width="122" height="30" fontName="Outfit" fontSize="22.0" bold="false" vTextAlign="Middle">
+				<text><![CDATA[Condiciones]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblCondicionesComerciales"/>
+			</element>
+			<element kind="textField" uuid="c0e11c95-e638-47d6-aeea-a88045364a12" x="20" y="60" width="711" height="490" fontName="Inter 18pt Light" fontSize="12.0" textAdjust="ScaleFont" blankWhenNull="true">
+				<expression><![CDATA[$P{pCondicionesGenerales}]]></expression>
+				<property name="com.jaspersoft.studio.element.name" value="txtCondicionesComerciales"/>
+			</element>
+			<element kind="staticText" uuid="b4be4fd0-14f6-48f0-8001-6ef3ae4a2c04" key="" x="133" y="10" width="227" height="30" forecolor="#D1363D" fontName="Outfit" fontSize="22.0" vTextAlign="Middle">
+				<text><![CDATA[comerciales]]></text>
+				<property name="com.jaspersoft.studio.element.name" value="lblCondicionesComerciales2"/>
+			</element>
+			<element kind="image" uuid="f73ce6f1-fdfd-4e64-a5a7-bf3e248cf431" key="" x="712" y="10" width="30" height="30">
+				<expression><![CDATA["/app/iconopdf.png"]]></expression>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="imgIcon6"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+</jasperReport>
