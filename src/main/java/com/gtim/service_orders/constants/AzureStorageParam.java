@@ -8,10 +8,10 @@ import lombok.Data;
 @Data
 @Component
 public class AzureStorageParam {
-    private String defaultEndpointsProtocol = "https";
-    private String accountName = "capexdevjc";
-    private String accountKey = "Z8NaxREDqbZYCwfHJXBGRiCPIhpJpBrFN2ba4Uq2gkv6nCXmYuWtA7Xpo3cLE+Mlh8SkuMOy2TQk+ASt6wwIUw==";
-    private String container = "somgtim";
+    private String defaultEndpointsProtocol = "";
+    private String accountName = "";
+    private String accountKey = "";
+    private String container = "";
     
     public String getStorageConnectionString(){
         String storageConnectionString = 
